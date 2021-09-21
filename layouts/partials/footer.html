@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      {{ with .Site.Params.footer.copyrights }}
+      <div class="col-lg-10 col-md-8">
+        <div class="site-footer-widget">
+          <h5 class="site-footer-widget-title">{{ .poweredby }}</h5>
+          <p class="site-footer-widget-description">
+            {{ .copyrights | safeHTML }}
+          </p>
+        </div>
+      </div>
+      {{ end }}
+      <div class="col-lg-2 col-12">
+        <a href="#top" class="site-footer-widget-top">
+          <img src="{{ "images/to-top.svg" | absURL }}" alt="back-to-top">
+          <p>
+            Scroll Top
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{{ $formhandler := resources.Get "js/formhandler.js" | minify }}
+<script src="{{ $formhandler.Permalink }}"></script>
+{{ $vendor := resources.Get "js/vendor.js" | minify }}
+<script src="{{ $vendor.Permalink }}"></script>
+{{ $script := resources.Get "js/script.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>

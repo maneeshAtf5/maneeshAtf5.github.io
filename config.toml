@@ -1,0 +1,92 @@
+baseURL       = "http://example.org/"
+languageCode  = "en-us"
+title         = "F5 Open Source"
+theme         = "roxo"
+summarylength = 25
+
+# Site Menus
+[menu]
+  # Navbar Menus
+  [[menu.nav]]
+    name    = "Home"
+    url     = ""
+    weight  = 1
+  [[menu.nav]]
+    name    = "Projects"
+    url     = "projects"
+    weight  = 2
+  [[menu.nav]]
+    name    = "F5 Approach"
+    url     = "f5approach"
+    weight  = 3
+  [[menu.nav]]
+    name    = "About"
+    url     = "about"
+    weight  = 4
+  [[menu.nav]]
+    name    = "Blog"
+    url     = "blog"
+    weight  = 5
+
+# Site Params
+[params]
+  logo = "images/logo.png"
+  dateFormat = "26 FEB 1994"
+  # Meta data
+  description = "Roxo Hugo themes | Design Agency Template by StaticMania"
+  author = "StaticMania"
+  # Google Analitycs
+  googleAnalitycsID = "Your ID"
+  # We're using formspree.io for form handling, paste your formspree url below
+  formspreeFormUrl  = "https://formspree.io/myykjpje"
+
+  # Contact Form
+  [params.contactForm]
+    placeholder_first_name        = "First Name"
+    placeholder_last_name         = "Last Name"
+    placeholder_email             = "Email"
+    placeholder_project_type      = "Project Type"
+    placeholder_about_the_project = "About the Project"
+    send_message                  = "Send Message"
+
+    [[params.contactForm.projectType]]
+      value = "gd"
+      title  = "Graphics Design"
+    [[params.contactForm.projectType]]
+      value = "wd"
+      title  = "Web Design"
+  
+  # Navbar Action Button
+  [params.navAction]
+    status  = true
+    name    = "Get in touch"
+    url     = "contact"
+  
+
+  # Banner Section
+  [params.banner]
+    enable                = true
+    heading               = "Insert headline here More headline here"
+    tagline               = "SUBHEAD HERE"
+    primary_button        = "Read More about Something"
+    primary_button_url    = "portfolio"
+
+  [params.portfolio]
+    enable    = true
+    title     = "OUR RECENT WORKS"
+    subtitle  = "Crafting experiences and seeking to make the complex clear & beautiful."
+
+  [params.call_to_action]
+    enable              = true
+    background_image    = "images/backgrounds/cta-background.jpg"
+    title               = "LET’S WORK TOGETHER"
+    primary_button      = "Submit Query"
+    primary_button_url  = "contact"
+    secondary_button    = "Not Convinced"
+    secondary_button_url = "portfolio"
+
+  [params.footer]
+    # Footer Info
+      [params.footer.copyrights]
+        poweredby  = "Powered by open source statement"
+        copyrights = " Copyright 2021 statement"

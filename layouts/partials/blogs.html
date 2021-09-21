@@ -1,0 +1,29 @@
+
+  <section class="site-hero" >
+    <div style="margin: 5% 0;" class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="section-title">Recent blog posts</h4>
+            </div>
+        </div>
+        <div class="row">
+            {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+                <div  class="col-4">
+                    <div class="row">
+                        <h6>
+                            {{ .Params.title }}
+                        </h6>
+                    </div>
+                    <div class="row">
+                        <p>
+                            {{ .Params.author }}
+                        </p>
+                    </div>
+                    <div class="row">
+                        <a href="{{ .Permalink }}">Read More...</a>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+  </section>
